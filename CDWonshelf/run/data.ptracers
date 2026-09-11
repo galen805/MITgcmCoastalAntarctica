@@ -1,0 +1,62 @@
+# This set-up makes is supposed to imitate salt. That is, PTRACER(:,:,:,1)
+# should look exactly like S(:,:,:).
+ &PTRACERS_PARM01
+ PTRACERS_numInUse=4,
+
+# adjust if restarting from checkpoint
+ PTRACERS_Iter0 = 0,
+
+
+PTRACERS_dumpFreq = 864000.0,
+# PTRACERS_addSrelax2EmP=.TRUE.,
+#-- for each tracer
+# PTRACERS_advScheme(1)=2,
+ PTRACERS_diffKh(1)=0.0,
+ PTRACERS_diffKr(1)=5.E-7,
+ PTRACERS_EvPrRn(1)=0.,
+#PTRACERS_useDWNSLP(1)=.FALSE.,
+#PTRACERS_stayPositive(1)=.FALSE.,
+ PTRACERS_initialFile(1)='ptracers_file.bin',
+#EH3 added for MNC
+ PTRACERS_names(1)='salt_mimic',
+
+# PTRACERS_advScheme(2)=2,
+ PTRACERS_diffKh(2)=0.0,
+ PTRACERS_diffKr(2)=5.E-7,
+ PTRACERS_EvPrRn(2)=0.,
+#PTRACERS_useDWNSLP(2)=.FALSE.,
+#PTRACERS_stayPositive(2)=.FALSE.,
+ PTRACERS_initialFile(2)='ptracers_file.bin',
+#EH3 added for MNC
+ PTRACERS_names(2)='seaice_melt_ptr',
+
+# PTRACERS_advScheme(3)=2,
+ PTRACERS_diffKh(3)=0.0,
+ PTRACERS_diffKr(3)=5.E-7,
+ PTRACERS_EvPrRn(3)=0.,
+#PTRACERS_useDWNSLP(3)=.FALSE.,
+#PTRACERS_stayPositive(3)=.FALSE.,
+ PTRACERS_initialFile(3)='ptracers_file.bin',
+#EH3 added for MNC
+ PTRACERS_names(3)='shelfice_melt_ptr',
+
+# PTRACERS_advScheme(4)=2,
+ PTRACERS_diffKh(4)=0.0,
+ PTRACERS_diffKr(4)=5.E-7,
+ PTRACERS_EvPrRn(4)=0.,
+#PTRACERS_useDWNSLP(4)=.FALSE.,
+#PTRACERS_stayPositive(4)=.FALSE.,
+ PTRACERS_initialFile(4)='ptracers_file.bin',
+#EH3 added for MNC
+ PTRACERS_names(4)='runoff_ptr',
+
+# PTRACERS_advScheme(5)=2,
+# PTRACERS_diffKh(5)=0.0,
+# PTRACERS_diffKr(5)=5.E-7,
+# PTRACERS_EvPrRn(5)=0.,
+#PTRACERS_useDWNSLP(5)=.FALSE.,
+#PTRACERS_stayPositive(5)=.FALSE.,
+# PTRACERS_initialFile(5)='ptracers_file_CDW.bin',
+#EH3 added for MNC
+# PTRACERS_names(5)='CDW_intrusion',
+ &

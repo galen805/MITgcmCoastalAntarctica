@@ -1,0 +1,21 @@
+ &SALT_PLUME_PARM01
+
+ CriterionType      = 2,
+ PlumeMethod        = 1,
+ Npower             = 5,
+ SaltPlumeCriterion = 0.005D0,
+ SPovershoot        = 1.0D0,
+ SPsalFRAC          = 1.0D0,
+
+# By default SPinflectionPoint is unused
+# This is achieved by undefine SALT_PLUME_IN_LEADS in SALT_PLUME_OPTIONS.h
+# By default, the code activates pkg/salt_plume whenever seaice forms.
+
+# SPinflectionPoint  = 0.01D0,
+
+# unused in code- SPalpha = 0.001D0,
+# use the default- SPbrineSconst = 45.0D0,
+ 
+ 
+ &
+
