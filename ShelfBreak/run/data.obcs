@@ -1,0 +1,52 @@
+# Open-boundaries
+ &OBCS_PARM01
+# This flag turns off checking and fixing problematic topography across
+# open boundaries.
+ OBCSfixTopo=.FALSE.,
+ OB_Jnorth= 396*-1,
+# OB_Ieast= 288*-1,
+# OB_Iwest= 288*1,
+
+ useOrlanskiNorth = .TRUE.,
+ useOrlanskiEast = .FALSE.,
+ useOrlanskiWest = .FALSE.,
+ useOBCSprescribe = .TRUE.,
+
+
+# Ice OBCS files
+# OBWaFile = 'iceOBCSawest.bin',
+# OBEaFile = 'iceOBCSawest.bin',
+# OBWhFile = 'iceOBCShwest.bin',
+# OBEhFile = 'iceOBCShwest.bin',
+ OBNaFile = 'iceOBCSanorth.bin',
+ OBNhFile = 'iceOBCShnorth.bin',
+
+ OBCS_monitorFreq= 36000.,
+ OBCS_monSelect = 2,
+ useOBCSbalance=.true.,
+
+ OBCS_balanceFacN = -1.,
+# OBCS_balanceFacE = 0.,
+# OBCS_balanceFacW = 0.,
+ useSeaiceSponge=.FALSE.,
+ useOBCSsponge=.FALSE.,
+ &
+
+# Orlanski parameters
+ &OBCS_PARM02
+ Cmax=0.45,
+ cVelTimeScale=1000.,
+ &
+
+
+ &OBCS_PARM05
+ # seaiceSpongeThickness = 3
+ # Arelaxobcsinner  = 30.
+ # Arelaxobcsbound  = 30.
+ # Hrelaxobcsinner  = 30.
+ # Hrelaxobcsbound  = 30.
+ # SLrelaxobcsinner = 30.
+ # SLrelaxobcsbound = 30.
+ # SNrelaxobcsinner = 30.
+ # SNrelaxobcsbound = 30.
+ &

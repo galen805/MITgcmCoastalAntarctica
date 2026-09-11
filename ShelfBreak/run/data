@@ -1,0 +1,106 @@
+# ====================
+# | Model parameters |
+# ====================
+#
+# Continuous equation parameters
+ &PARM01
+# reference temp and salinity
+ tRefFile = 'T_ref_file.bin',
+ sRefFile = 'salt_ref_file.bin',
+# viscosity and diffusivity constants
+ viscAr=1.E-5,
+# smag depends on velocity
+ viscC2smag=1.0,
+# biharmonic
+ viscA4Grid=0.1,
+ viscA4GridMax=0.5,
+ diffK4T=5.E-7,
+ diffKr4T=5.E-7,
+ diffK4S=5.E-7,
+ diffKr4S=5.E-7,
+
+# bottom drag
+ no_slip_sides=.FALSE.,
+ no_slip_bottom=.FALSE.,
+ bottomDragQuadratic=2.5E-3,
+
+# advection and diffusion schemes
+ nonHydrostatic=.FALSE.,
+ implicitDiffusion  = .TRUE.,
+ implicitViscosity  = .TRUE.,
+ saltAdvScheme=33,
+ saltVertAdvScheme =33,
+ tempAdvScheme=33,
+ tempVertAdvScheme=33,
+
+# free surface
+ rigidLid=.FALSE.,
+ implicitFreeSurface=.TRUE.,
+
+# other stuff
+ eosType='JMD95Z', 
+ HeatCapacity_cp = 3974.0,
+ rhoConst=1030.,
+ rhoNil=1030.,
+ gravity=9.81,
+ convertFW2Salt = 33.4,
+ exactConserv=.TRUE.,
+ hFacMin=0.2,
+ readBinaryPrec=64,
+ staggerTimeStep=.TRUE.,
+ &
+
+# Elliptic solver parameters
+ &PARM02
+ cg2dMaxIters=1000,
+ cg2dTargetResidual=1.E-13,
+ cg3dMaxIters=400,
+ cg3dTargetResidual=1.E-13,
+ &
+
+
+# Time stepping parameters
+ &PARM03
+
+# one year 360 days
+# daily output
+# biannual checkpoints
+
+# one year testing
+ nIter0=0,
+ nTimeSteps=259200,
+
+# yr 1-2
+# nIter0=0,
+# nTimeSteps=518400,
+
+# yr 3-4
+# nIter0=518400,
+# nTimeSteps=518400,
+
+ deltaT=120.0,
+ abEps=0.1,
+ cAdjFreq = 0,
+ pChkptFreq=31104000.0,
+ dumpFreq=864000.0,
+ taveFreq=0.0,
+ monitorFreq=36000.,
+ monitorSelect=2,
+tracForcingOutAB = 1,
+ &
+
+# Gridding parameters
+ &PARM04
+ usingSphericalPolarGrid=.TRUE.,
+ ygOrigin = -76.0,
+ delXfile='dxfile.bin',
+ delYfile='dyfile.bin',
+ delRfile='dzfile.bin',
+ &
+
+# Input datasets
+ &PARM05
+ bathyFile='bathy.box',
+ hydrogThetaFile='init_T_file.bin',
+ hydrogSaltFile='init_S_file.bin',
+ &
