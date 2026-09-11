@@ -1,0 +1,43 @@
+# RBCS package parameters:
+ &RBCS_PARM01
+ useRBCsalt=.TRUE.,
+ useRBCtemp=.TRUE.,
+
+ tauRelaxT=3600.,
+ tauRelaxS=3600.,
+
+ relaxMaskFile(1)='rbcs_mask_T.bin',
+ relaxMaskFile(2)='rbcs_mask_S.bin',
+ relaxTFile='rbcs_T_file.bin',
+ relaxSFile='rbcs_S_file.bin'
+
+ useRBCptracers=.TRUE.,
+ relaxMaskFile(3)='rbcs_mask_ptracers.bin',
+ relaxMaskFile(4)='rbcs_mask_ptracers.bin',
+ relaxMaskFile(5)='rbcs_mask_ptracers.bin',
+ relaxMaskFile(6)='rbcs_mask_ptracers.bin',
+ relaxMaskFile(7)='rbcs_mask_ptracers_CDW.bin',
+ &
+
+# RBCS for pTracers (read this namelist only when ptracers pkg is compiled)
+ &RBCS_PARM02
+  useRBCptrnum(1)    = .TRUE.,
+  tauRelaxPTR(1)     = 3600.,
+  relaxPtracerFile(1)='ptracers_file.bin',
+
+  useRBCptrnum(2)    = .TRUE.,
+  tauRelaxPTR(2)     = 3600.,
+  relaxPtracerFile(2)='ptracers_file.bin',
+
+  useRBCptrnum(3)    = .TRUE.,
+  tauRelaxPTR(3)     = 3600.,
+  relaxPtracerFile(3)='ptracers_file.bin',
+
+  useRBCptrnum(4)    = .TRUE.,
+  tauRelaxPTR(4)     = 3600.,
+  relaxPtracerFile(4)='ptracers_file.bin',
+  
+  useRBCptrnum(5)    = .TRUE.,
+  tauRelaxPTR(5)     = 3600.,
+  relaxPtracerFile(5)='ptracers_file_CDW.bin',
+ &

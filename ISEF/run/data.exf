@@ -1,0 +1,129 @@
+#
+# *********************
+# External Forcing Data
+# *********************
+ &EXF_NML_01
+#
+ useExfCheckRange  = .FALSE.,
+ repeatPeriod      = 0.0,
+ exf_iprec         = 64,
+ exf_yftype        = 'RL',
+#
+ &
+
+# *********************
+ &EXF_NML_02
+#
+ hfluxstartdate1   = 19790101,
+ hfluxstartdate2   = 000000,
+ hfluxperiod       = 1576800000.0,
+#
+ sfluxstartdate1   = 19790101,
+ sfluxstartdate2   = 000000,
+ sfluxperiod       = 1576800000.0,
+#
+ ustressstartdate1 = 19790101,
+ ustressstartdate2 = 000000,
+ ustressperiod     = 1576800000.0,
+#
+ vstressstartdate1 = 19790101,
+ vstressstartdate2 = 000000,
+ vstressperiod     = 1576800000.0,
+#
+ atempstartdate1   = 19790101,
+ atempstartdate2   = 000000,
+ atempperiod       = 4320000.0,
+#
+ aqhstartdate1     = 19790101,
+ aqhstartdate2     = 000000,
+ aqhperiod         = 1576800000.0,
+#
+#evapstartdate1    = 19790101,
+#evapstartdate2    = 000000,
+#evapperiod        = 1576800000.0,
+#
+ precipstartdate1  = 19790101,
+ precipstartdate2  = 000000,
+ precipperiod      = 1576800000.0,
+#
+ uwindstartdate1   = 19790101,
+ uwindstartdate2   = 000000,
+ uwindperiod       = 21600.0,
+#
+ vwindstartdate1   = 19790101,
+ vwindstartdate2   = 000000,
+ vwindperiod       = 21600.0,
+#
+ swfluxstartdate1  = 19790101,
+ swfluxstartdate2  = 000000,
+ swfluxperiod      = 1576800000.0,
+#
+ lwfluxstartdate1  = 19790101,
+ lwfluxstartdate2  = 000000,
+ lwfluxperiod      = 1576800000.0,
+#
+ swdownstartdate1  = 19790101,
+ swdownstartdate2  = 000000,
+ swdownperiod      = 4320000.0,
+#
+ lwdownstartdate1  = 19790101,
+ lwdownstartdate2  = 000000,
+ lwdownperiod      = 4320000.0,
+#
+ climsststartdate1  = 19790101,
+ climsststartdate2  = 000000,
+ climsstperiod      = 1576800000.0,
+ climsstTauRelax    = 0.0,
+#
+ climsssstartdate1  = 19790101,
+ climsssstartdate2  = 000000,
+ climsssperiod      = 1576800000.0,
+ climsssTauRelax    = 0.0,
+#
+ hfluxfile         = ' ',
+ sfluxfile         = ' ',
+ ustressfile       = ' ',
+ vstressfile       = ' ',
+ atempfile         = 'airtempfield.bin',
+ aqhfile           = 'humidfield.bin',
+ uwindfile         = 'uwind.bin',
+ vwindfile         = 'vwind.bin',
+# evapfile          = 'empty2dfield.bin',
+ precipfile        = 'empty2dfield.bin',
+ lwfluxfile        = ' ',
+ swfluxfile        = ' ',
+ lwdownfile        = 'lwdownfield.bin',
+ swdownfile        = 'swdownfield.bin',
+ runoffFile        = 'empty2dfield.bin',
+ climsstfile       = ' ',
+ climsssfile       = ' ',
+#
+ &
+
+# *********************
+ &EXF_NML_03
+exf_offset_atemp  = 273.15,
+ &
+
+# *********************
+ &EXF_NML_04
+ &
+
+
+ &EXF_NML_OBCS
+ obcsNstartdate1     = 19790101,
+ obcsNstartdate2     = 000000,
+ obcsNperiod         = 1576800000.0,
+#
+ obcsSstartdate1     = 19790101,
+ obcsSstartdate2     = 00000,
+ obcsSperiod         = 1576800000.0,
+#
+ obcsWstartdate1     = 19790101,
+ obcsWstartdate2     = 00000,
+ obcsWperiod         = 1576800000.0,
+#
+ obcsEstartdate1     = 19790101,
+ obcsEstartdate2     = 00000,
+ obcsEperiod         = 1576800000.0,
+ &

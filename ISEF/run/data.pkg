@@ -1,0 +1,15 @@
+# Packages
+ &PACKAGES
+ useShelfIce=.TRUE.,
+ useEXF=.TRUE.,
+useDiagnostics=.TRUE.,
+ useMNC=.TRUE.,
+ useCAL=.TRUE.,
+ useOBCS=.TRUE.,
+ useRBCS=.TRUE.,
+usePTRACERS=.TRUE.,
+useKPP = .TRUE.,
+useSEAICE=.TRUE.,
+useTHSICE=.FALSE.,
+useSALT_PLUME  = .FALSE.,
+ &

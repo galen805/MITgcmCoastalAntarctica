@@ -1,0 +1,119 @@
+# SEAICE parameters
+ &SEAICE_PARM01
+      SEAICEwriteState   = .TRUE.
+      SEAICE_multDim     = 7
+##      SEAICE_initialHEFF = 0.0,
+#      SEAICE_initialHEFF = 1.5,
+# Gael's param for pstar
+#      SEAICEpresH0=2.,
+#      SEAICEpresPow0=1,
+#      SEAICEpresPow1=3,
+# end Gael's param
+# parameters adjusted to defalt values by Weifeng Gordon Zhang on Jan 16, 2018
+
+#      SEAICE_dryIceAlb   = 0.7,
+#      SEAICE_wetIceAlb   = 0.7060,
+#      SEAICE_drySnowAlb  = 0.8652,
+#      SEAICE_wetSnowAlb  = 0.8085,
+
+#      SEAICE_dryIceAlb_south  = 0.8509,
+#      SEAICE_wetIceAlb_south  = 0.7284,
+#      SEAICE_drySnowAlb_south = 0.7754,
+#      SEAICE_wetSnowAlb_south = 0.7753,
+
+# change sea ice albedo to all 0.7 - 2022.03.24
+      SEAICE_dryIceAlb   = 0.7,
+      SEAICE_wetIceAlb   = 0.7,
+      SEAICE_drySnowAlb  = 0.7,
+      SEAICE_wetSnowAlb  = 0.7,
+
+      SEAICE_dryIceAlb_south  = 0.7,
+      SEAICE_wetIceAlb_south  = 0.7,
+      SEAICE_drySnowAlb_south = 0.7,
+      SEAICE_wetSnowAlb_south = 0.7,
+
+# sice2
+#      SEAICE_dryIceAlb   = 0.5,
+#      SEAICE_wetIceAlb   = 0.5,
+#      SEAICE_drySnowAlb  = 0.5,
+#      SEAICE_wetSnowAlb  = 0.5,
+
+      SEAICE_strength    = 2.75E+04,
+# parameters adjusted to defalt values by Weifeng Gordon Zhang on Jan 16, 2018
+#      OCEAN_drag         = 8.1541e-04,
+#      SEAICE_waterDrag   = 5.5627,
+#      SEAICE_drag        = 0.00114,
+# sice1
+      OCEAN_drag         = 0.001,
+      SEAICE_waterDrag   = 5.5E-3,
+      SEAICE_drag        = 0.002,
+
+      HO                 = 0.2,
+      LSR_ERROR          = 1e-4,
+      SEAICEuseDYNAMICS  = .TRUE.,
+#
+#      SEAICE_saltFrac = 0.3,
+#      SEAICE_area_reg = 0.15,
+#      SEAICE_area_floor = 0.00001,
+#      SEAICE_hice_reg = 0.1,
+#      IMAX_TICE = 6,
+#      SEAICE_EPS = 1.E-8,
+#
+      MIN_ATEMP          = -40.,
+      MIN_TICE           = -40.,
+      SEAICEadvSnow      = .FALSE.,
+      SEAICEadvSalt      = .FALSE.,
+      SEAICEadvHeff      = .TRUE.,
+      SEAICEadvArea      = .TRUE.,
+      SEAICEuseFlooding  = .FALSE.,
+      SEAICEadvScheme    = 77,
+      DIFF1              = 0.0,
+
+#ian new begin
+      SEAICE_area_reg = 0.15,
+      SEAICE_area_floor = 0.00001,
+      SEAICE_hice_reg = 0.1,
+      IMAX_TICE = 6,
+      SEAICE_EPS = 1.E-8,
+#ian new end
+
+#ph new begin
+      SEAICE_salt0 = 4.0,
+      SEAICE_doOpenWaterGrowth = .TRUE.,
+      SEAICE_doOpenWaterMelt = .TRUE.,
+      SEAICE_areaLossFormula = 1,
+
+# 20200219- add after comparisons with ECCO LLC4320 experiment
+# SEAICE_wetAlbTemp default is 1E-3 in degC. So this change is trivial
+# the advection scheme is 33 instead of 77 to be consistent with all other schemes
+
+      SEAICE_wetAlbTemp  = 0.0,
+#      SEAICE_saltFrac    = 0.3,
+
+# 10 m / 240 sec
+#      SEAICE_mcPheePiston = 0.01,
+#ph new end
+
+      SEAICEuseMetricTerms = .TRUE.,
+      SEAICE_no_slip     = .FALSE.,
+
+#      SEAICEheatConsFix  = .TRUE.,
+
+      AreaFile='SIarea_init.bin',
+      HeffFile='SIheff_init.bin',
+#      HsnowFile='Hsnowinit.bin',
+#      HsaltFile='Hsaltinit.bin',
+#      uIceFile='Uiceinit.bin',
+#      vIceFile='Viceinit.bin',
+
+
+# 20200112- use Lipscomb et al. (2007)
+# ridging following seaice_itd
+
+SEAICEsimpleRidging = .FALSE.,
+useHibler79IceStrength = .TRUE.,
+SEAICE_cf        = 10.,
+SEAICEredistFunc = 1,
+SEAICEpartFunc = 1,
+# SEAICEsnowFracRidge = 1.,
+ &
