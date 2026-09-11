@@ -1,11 +1,11 @@
 # MITgcmCoastalAntarctica
 Code for three MITgcm models of the Antarctic regional circulation with a thermodynamically active ice shelf, sea ice parameterizations, and KPP mixing. Idealized coastal geometries are intended to produce general results.
 
-ISEF: One year simulations of the on-shelf circulation. Code used to produce results in https://journals.ametsoc.org/view/journals/phoc/55/11/JPO-D-24-0217.1.xml. Takes ~12 hours to run on 100 processes.
+ISEF: One year simulations of the on-shelf circulation. Code used to produce results in https://journals.ametsoc.org/view/journals/phoc/55/11/JPO-D-24-0217.1.xml. Takes ~12 hours to run on 100 processes. Zenodo DOI https://doi.org/10.5281/zenodo.20722285
 
-CDWonshelf: Ten year simulations of the on-shelf circulation designed for longer runtimes. Takes ~16 hours to run on 144 processes.
+CDWonshelf: Ten year simulations of the on-shelf circulation designed for longer runtimes. Takes ~16 hours to run on 144 processes. Zenodo DOI https://doi.org/10.5281/zenodo.16955044
 
-ShelfBreak: One year simulations of the coastal circulation with model geometry including a continental shelf break. Takes ~12 hours to run on 288 processes.
+ShelfBreak: One year simulations of the coastal circulation with model geometry including a continental shelf break. Takes ~12 hours to run on 288 processes. Not on Zenodo yet, too many bots there!
 
 The steps to run these codes are all essentially the same. You will need access to an HPC with MATLAB, the MITgcm source code, and all necessary packages. The basic workflow is
 
