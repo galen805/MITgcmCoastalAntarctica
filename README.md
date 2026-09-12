@@ -5,7 +5,7 @@ ISEF: One year simulations of the on-shelf circulation. Code used to produce res
 
 CDWonshelf: Ten year simulations of the on-shelf circulation designed for longer runtimes. Takes ~16 hours to run on 144 processes. Zenodo DOI https://doi.org/10.5281/zenodo.16955044
 
-ShelfBreak: One year simulations of the coastal circulation with model geometry including a continental shelf break. Takes ~12 hours to run on 288 processes. Not on Zenodo yet, too many bots there!
+ShelfBreak: One year simulations of the coastal circulation with model geometry including a continental shelf break. Takes ~12 hours to run on 288 processes. Zenodo release forthcoming.
 
 The steps to run these codes are all essentially the same. You will need access to an HPC with MATLAB, the MITgcm source code, and all necessary packages. The basic workflow is as follows. You can also check the MITgcm docs at https://mitgcm.readthedocs.io/en/latest/.
 
